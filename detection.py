@@ -49,8 +49,6 @@ messages['message'] = messages['message'].apply(preprocess_message)
 X = messages['message']
 Y = messages['type']
 
-x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.25)
-
 
 vectorizer = CountVectorizer()
 spam_features = vectorizer.fit_transform(messages['message'])
